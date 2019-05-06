@@ -108,12 +108,13 @@
       var popup = new mapboxgl.Popup;
       map.on('mouseenter', 'tilequery-points', function(e) {
         map.getCanvas().style.cursor = 'pointer';
-        var title = '<h3>' + e.features[0].properties.Address + '</h3>';
-        console.log(title);
+        //var title = '<h3>' + e.features[0].properties.Address + '</h3>';
+        //console.log(title);
         var eventType = '<h4>' + e.features[0].properties.EVENT_TYPE + '</h4>';
         var eventTIME = '<h4>' + e.features[0].properties.START_TIME + ' to ' + e.features[0].properties.END_TIME + '</h4>';
         var eventDesc = '<p>' + e.features[0].properties.Description + '</p>';
-        var storeAddress = '<p>' + e.features[0].properties.Address + '</p>';
+        var houseAddress = '<p>' + e.features[0].properties.Address + '</p>';
+        console.log(houseAddress);
         var obj = JSON.parse(e.features[0].properties.tilequery);
         var distance = '<p>' + (obj.distance / 1609.344).toFixed(2) + ' mi. from location' + '</p>';
         var lon = e.features[0].properties.Longitude;
