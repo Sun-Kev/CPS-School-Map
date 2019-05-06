@@ -54,6 +54,7 @@
         console.log(point[12]);
         var query = 'https://api.mapbox.com/v4/' + tileset + '/tilequery/' + point[11] + ',' + point[12] + '.json?radius=' + radius + '&limit= ' + limit + ' &access_token=' + mapboxgl.accessToken;
         marker.setLngLat(point).addTo(map);
+        console.log(query);
         $.ajax({
           method: 'GET',
           url: query,
