@@ -47,7 +47,7 @@
       var marker = new mapboxgl.Marker({'color': '#008000'})
       geocoder.on('result', function(data) {
         var point = data.result.center;
-        var tileset = 'abhinemani.bful6da0';
+        var tileset = 'kevsun92.95mv9zcz';
         var radius = 1609;
         var limit = 50;
         var query = 'https://api.mapbox.com/v4/' + tileset + '/tilequery/' + point[0] + ',' + point[1] + '.json?radius=' + radius + '&limit= ' + limit + ' &access_token=' + mapboxgl.accessToken;
