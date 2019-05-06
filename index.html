@@ -56,7 +56,8 @@
           method: 'GET',
           url: query,
         }).done(function(data) {
-          map.getSource('tilequery').setData(data);
+          console.log(data);
+          //map.getSource('tilequery').setData(data);
         })
       });
       map.addSource('tilequery', {
