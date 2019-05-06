@@ -50,7 +50,7 @@
         var tileset = 'kevsun92.00ru2jav';
         var radius = 1609;
         var limit = 50;
-        var query = 'https://api.mapbox.com/v4/' + tileset + '/tilequery/' + point[12] + ',' + point[11] + '.json?radius=' + radius + '&limit= ' + limit + ' &access_token=' + mapboxgl.accessToken;
+        var query = 'https://api.mapbox.com/v4/' + tileset + '/tilequery/' + point[11] + ',' + point[12] + '.json?radius=' + radius + '&limit= ' + limit + ' &access_token=' + mapboxgl.accessToken;
         marker.setLngLat(point).addTo(map);
         $.ajax({
           method: 'GET',
