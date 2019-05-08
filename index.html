@@ -10,6 +10,8 @@
   <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.1.2/mapbox-gl-geocoder.min.js'></script>
   <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.1.2/mapbox-gl-geocoder.css' type='text/css' />
   <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  <link rel="stylesheet" type="text/css" href="main.css">
+
   <style>
     body {
       margin: 0;
@@ -105,7 +107,7 @@
       var popup = new mapboxgl.Popup;
       map.on('mouseenter', 'tilequery-points', function(e) {
         map.getCanvas().style.cursor = 'pointer';
-        var propertyName = '<h3>' + "Property Name: " + e.features[0].properties['Property Name'] + '</h3>';
+        var propertyName = '<h3 class='label'>' + "Property Name: " + e.features[0].properties['Property Name'] + '</h3>';
         var propertyType = '<p>' + "Property Type: " + e.features[0].properties['Property Type'] + '</p>';
         var communityArea = '<p>' + "Community Area: " + e.features[0].properties['Community Area Name'] + '</p>';
         var Address = '<p>' + "Address: " + e.features[0].properties['Address'] + '</p>';
