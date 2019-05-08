@@ -1,1 +1,1 @@
-# civic_tech
+# Chicago Public Schools & Affordable Housing Interactive Map
