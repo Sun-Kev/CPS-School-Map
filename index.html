@@ -3,7 +3,7 @@
 
 <head>
   <meta charset='utf-8' />
-  <title>447 Affordable Housing</title>
+  <title>449 Affordable Housing</title>
   <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
   <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.js'></script>
   <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.css' rel='stylesheet' />
@@ -107,7 +107,7 @@
         map.getCanvas().style.cursor = 'pointer';
         var title = '<h3>' + e.features[0].properties['Property Name'] + '</h3>';
         console.log("HERE");
-        console.log("properties", properties);
+        console.log("properties", e.features[0].properties);
         var eventType = '<h4>' + e.features[0].properties.EVENT_TYPE + '</h4>';
         var eventTIME = '<h4>' + e.features[0].properties.START_TIME + ' to ' + e.features[0].properties.END_TIME + '</h4>';
         var eventDesc = '<p>' + e.features[0].properties.Description + '</p>';
