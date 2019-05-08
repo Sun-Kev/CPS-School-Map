@@ -3,7 +3,7 @@
 
 <head>
   <meta charset='utf-8' />
-  <title>451 Affordable Housing</title>
+  <title>454 Affordable Housing</title>
   <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
   <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.js'></script>
   <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.css' rel='stylesheet' />
@@ -107,18 +107,16 @@
         map.getCanvas().style.cursor = 'pointer';
         var title = '<h3>' + e.features[0].properties['Property Name'] + '</h3>';
         console.log("HERE");
-        console.log("properties", e.features[0].properties);
         var eventType = '<h4>' + e.features[0].properties['Property Type'] + '</h4>';
         //var eventTIME = '<h4>' + e.features[0].properties.START_TIME + ' to ' + e.features[0].properties.END_TIME + '</h4>';
-        var eventDesc = '<p>' + e.features[0].properties['Community Area Name'] + '</p>';
-        var houseAddress = '<p>' + e.features[0].properties['Address'] + '</p>';
-        console.log(houseAddress);
-        var obj = JSON.parse(e.features[0].properties.tilequery);
-        var distance = '<p>' + (obj.distance / 1609.344).toFixed(2) + ' mi. from location' + '</p>';
-        var lon = e.features[0].properties.Longitude;
-        var lat = e.features[0].properties.Latitude;
-        var coordinates = new mapboxgl.LngLat(lon, lat);
-        var content = title + eventType + eventTIME + eventDesc;
+        //var eventDesc = '<p>' + e.features[0].properties['Community Area Name'] + '</p>';
+        //var houseAddress = '<p>' + e.features[0].properties['Address'] + '</p>';
+        //var obj = JSON.parse(e.features[0].properties.tilequery);
+        //var distance = '<p>' + (obj.distance / 1609.344).toFixed(2) + ' mi. from location' + '</p>';
+        //var lon = e.features[0].properties.Longitude;
+        //var lat = e.features[0].properties.Latitude;
+        //var coordinates = new mapboxgl.LngLat(lon, lat);
+        //var content = title + eventType + eventTIME + eventDesc;
         popup.setLngLat(coordinates)
           .setHTML(content)
           .addTo(map);
