@@ -105,7 +105,8 @@
       var popup = new mapboxgl.Popup;
       map.on('mouseenter', 'tilequery-points', function(e) {
         map.getCanvas().style.cursor = 'pointer';
-        var title = '<h3>' + e.features[0].properties.Address + '</h3>';
+        var title = '<h3>' + e.features[0].properties['Property Name'] + '</h3>';
+        console.log("HERE");
         console.log("properties", properties);
         var eventType = '<h4>' + e.features[0].properties.EVENT_TYPE + '</h4>';
         var eventTIME = '<h4>' + e.features[0].properties.START_TIME + ' to ' + e.features[0].properties.END_TIME + '</h4>';
