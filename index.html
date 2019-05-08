@@ -104,7 +104,7 @@
       var popup = new mapboxgl.Popup;
       map.on('mouseenter', 'tilequery-points', function(e) {
         map.getCanvas().style.cursor = 'pointer';
-        var Name = '<h3>' + "Name: " + e.features[0].properties['Property Name'] + '</h3>';
+        var Name = '<h3>' + "Name: " + e.features[0].properties['Name'] + '</h3>';
         var Address = '<p>' + "Address: " + e.features[0].properties['Address'] + '</p>';
         var lon = e.features[0].properties.Longitude;
         var lat = e.features[0].properties.Latitude;
