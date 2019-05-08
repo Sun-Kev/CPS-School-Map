@@ -3,7 +3,7 @@
 
 <head>
   <meta charset='utf-8' />
-  <title>456 Affordable Housing</title>
+  <title>459 Affordable Housing</title>
   <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
   <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.js'></script>
   <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.css' rel='stylesheet' />
@@ -113,8 +113,8 @@
         //var houseAddress = '<p>' + e.features[0].properties['Address'] + '</p>';
         //var obj = JSON.parse(e.features[0].properties.tilequery);
         //var distance = '<p>' + (obj.distance / 1609.344).toFixed(2) + ' mi. from location' + '</p>';
-        //var lon = e.features[0].properties.Longitude;
-        //var lat = e.features[0].properties.Latitude;
+        var lon = e.features[0].properties.Longitude;
+        var lat = e.features[0].properties.Latitude;
         var coordinates = new mapboxgl.LngLat(lon, lat);
         var content = title + eventType + eventDesc;
         popup.setLngLat(coordinates)
