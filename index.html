@@ -107,16 +107,14 @@
         map.getCanvas().style.cursor = 'pointer';
         var propertyName = '<h3>' + e.features[0].properties['Property Name'] + '</h3>';
         console.log("HERE");
-        var propertyType = '<h4>' + "Property Type: " + e.features[0].properties['Property Type'] + '</h4>';
-        //var eventTIME = '<h4>' + e.features[0].properties.START_TIME + ' to ' + e.features[0].properties.END_TIME + '</h4>';
+        var propertyType = '<p>' + "Property Type: " + e.features[0].properties['Property Type'] + '</p>';
         var communityArea = '<p>' + "Community Area: " + e.features[0].properties['Community Area Name'] + '</p>';
-        //var houseAddress = '<p>' + e.features[0].properties['Address'] + '</p>';
-        //var obj = JSON.parse(e.features[0].properties.tilequery);
-        //var distance = '<p>' + (obj.distance / 1609.344).toFixed(2) + ' mi. from location' + '</p>';
+        var Address = '<p>' + e.features[0].properties['Address'] + '</p>';
+        var phoneNumber = '<p>' + "Phone No.: " + e.features[0].properties['Phone Number'] + '</p>';
         var lon = e.features[0].properties.Longitude;
         var lat = e.features[0].properties.Latitude;
         var coordinates = new mapboxgl.LngLat(lon, lat);
-        var content = propertyName + propertyType + communityArea;
+        var content = propertyName + propertyType + communityArea + Address + phoneNumber;
         popup.setLngLat(coordinates)
           .setHTML(content)
           .addTo(map);
