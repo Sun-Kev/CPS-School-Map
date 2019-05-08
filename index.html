@@ -3,7 +3,7 @@
 
 <head>
   <meta charset='utf-8' />
-  <title>518 Affordable Housing</title>
+  <title>521 Affordable Housing</title>
   <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
   <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.js'></script>
   <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.css' rel='stylesheet' />
@@ -45,6 +45,22 @@
         placeholder: "Enter an address or place name",
           bbox: [-87.8,41.7,-87.5,42.0]
       });
+      var layers = ['Multfamily', 'Senior', 'Supportive Housing', 'Senior HUD 202', 'Supportive/Veterans', 'People with Disabilities', 'All Other Types'];
+      var colors = ['#FFD27A', '#6CEBDB', '#FF87AB', '#D0EB63', '#7A86FF', '#DF71FF', '#FF0000'];
+      for (i = 0; i < layers.length; i++) {
+        var layer = layers[i];
+        var color = colors[i];
+        var item = document.createElement('div');
+        var key = document.createElement('span');
+        key.className = 'legend-key';
+        key.style.backgroundColor = color;
+
+        var value = document.createElement('span');
+        value.innerHTML = layer;
+        item.appendChild(key);
+        item.appendChild(value);
+        legend.appendChild(item);
+      }
       map.addControl(geocoder, 'top-left');
       var marker = new mapboxgl.Marker({'color': '#cd3333'})
       geocoder.on('result', function(data) {
