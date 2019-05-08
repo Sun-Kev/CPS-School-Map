@@ -3,7 +3,7 @@
 
 <head>
   <meta charset='utf-8' />
-  <title>506 Affordable Housing</title>
+  <title>508 Affordable Housing</title>
   <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
   <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.js'></script>
   <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.css' rel='stylesheet' />
@@ -106,7 +106,7 @@
       map.on('mouseenter', 'tilequery-points', function(e) {
         map.getCanvas().style.cursor = 'pointer';
         var propertyName = '<h3>' + "Property Name: " + e.features[0].properties['Property Name'] + '</h3>';
-        var propertyType = '<p>' + <b>"Property Type: "</b> + e.features[0].properties['Property Type'] + '</p>';
+        var propertyType = '<p>' + "Property Type: " + e.features[0].properties['Property Type'] + '</p>';
         var communityArea = '<p>' + "Community Area: " + e.features[0].properties['Community Area Name'] + '</p>';
         var Address = '<p>' + "Address: " + e.features[0].properties['Address'] + '</p>';
         var phoneNumber = '<p>' + "Phone No. : " + e.features[0].properties['Phone Number'] + '</p>';
