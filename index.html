@@ -3,7 +3,7 @@
 
 <head>
   <meta charset='utf-8' />
-  <title>551 Chicago Affordable Housing and Public Schools</title>
+  <title>553 Chicago Affordable Housing and Public Schools</title>
   <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
   <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.js'></script>
   <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.css' rel='stylesheet' />
@@ -51,8 +51,8 @@
       geocoder.on('result', function(data) {
         var point = data.result.center;
         var tileset = 'kevsun92.4rswried';
-        var radius = 3200;
-        var limit = 100;
+        var radius = 1609;
+        var limit = 50;
         console.log(point);
         var query = 'https://api.mapbox.com/v4/' + tileset + '/tilequery/' + point[0] + ',' + point[1] + '.json?radius=' + radius + '&limit= ' + limit + ' &access_token=' + mapboxgl.accessToken;
         marker.setLngLat(point).addTo(map);
